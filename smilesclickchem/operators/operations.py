@@ -534,8 +534,7 @@ def save_generation_smi(output_directory,
 def save_ligand_list(output_directory, list_of_chosen_ligands, nomenclature_tag):
     """
     Save the list of ligands. nomenclature_tag is a string such as "Mutation"
-    or "Crossover" describing what this data is used
-    for.
+    describing what this data is used for.
 
     Inputs:
     :param dict output_directory: the directory of the run to save the

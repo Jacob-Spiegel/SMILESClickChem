@@ -294,7 +294,7 @@ def get_parents_full_names(child_name, master_shortname_mol_dict):
             will return [None, None]
         2) child ligand has 1 parent: ie) single reactant mutant
             will return ["parent_1_name", None]
-        3) child ligand has 2 parent: ie) crossover or two reactant mutation
+        3) child ligand has 2 parent: ie) two reactant mutation
             will return ["parent_1_name", "parent_2_name"]
     """
     # Handle if no parents

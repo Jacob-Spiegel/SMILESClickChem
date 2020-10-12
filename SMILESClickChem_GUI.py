@@ -3,7 +3,7 @@
 """This is the executable file for SMILESClickChem. This script should come
 first. It should obtain and verify all the parameters work. This than should
 pass these parameters variables to the main execution function titled
-SMILESMergeMainExecute.py found in MainFunctions
+smilesclickchem_main_execute.py found in MainFunctions
 
 If you use SMILESClickChem in your research, please cite the following reference:
 Spiegel, J.O., Durrant, J.D. AutoGrow4: an open-source genetic algorithm
@@ -360,13 +360,13 @@ if args_dict["cache_prerun"] is False:
     # Run SMILESClickChem. Import move here to prevent EOF in MPI mode. importing
     # files before the Parallelizer class is established in MPI mode can have
     # errors
-    import SMILESClickChem.SMILESMerge_main_execute as SMILESMergeMainExecute
+    import SMILESClickChem.smilesclickchem_main_execute as smilesclickchem_main_execute
 
-    SMILESMergeMainExecute.main_execute(vars)
+    smilesclickchem_main_execute.main_execute(vars)
 
     # Print completion message
 
-    printout = "\nSMILESMerge run started at:   {}\nSMILESMerge ".format(start_time)
+    printout = "\nSMILESClickChem run started at:   {}\nSMILESClickChem ".format(start_time)
     printout = printout + "run completed at: {}\n".format(str(datetime.datetime.now()))
     print(printout)
 
@@ -378,5 +378,5 @@ if args_dict["cache_prerun"] is False:
 
 else:  # cache prerun. This is necessary to prevent race conditions in mpi mode.
     import SMILESClickChem.user_vars
-    import SMILESClickChem.SMILESMerge_main_execute as SMILESMergeMainExecute
+    import SMILESClickChem.smilesclickchem_main_execute as smilesclickchem_main_execute
     import SMILESClickChem.operators.convert_files.gypsum_dl.gypsum_dl.Parallelizer

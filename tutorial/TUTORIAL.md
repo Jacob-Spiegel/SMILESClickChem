@@ -28,7 +28,7 @@ multithreading (RedHat Enterprise Server release 7.3 Maipo).
 SMILESClickChem has not been configured for Windows OS, but a script capable of
 running SMILESClickChem within a docker container on Windows can be found:
 
-`/SMILESClickChem/docker/SMILESMerge_in_docker.py`
+`/SMILESClickChem/docker/SMILESClickChem_in_docker.py`
 
 This script should run on any docker-enabled machine, and should be capable of
 multithreading. Details on running SMILESClickChem within a docker container can be
@@ -121,7 +121,7 @@ been tested using `func_timeout` version 4.3.5.
 
 #### Optional Installations
 
-Gooey API is required to run the GUI interface `/SMILESClickChem/RunSMILESMerge_GUI.py`.
+Gooey API is required to run the GUI interface `/SMILESClickChem/SMILESClickChem_GUI.py`.
 It can be obtained via `conda`/`pip`. Details for installation can be found at:
 `https://github.com/chriskiehl/Gooey`
 
@@ -208,7 +208,7 @@ through GUI interface.
 
 ### Command-line Interface
 
-To run SMILESClickChem, use the python script `RunSMILESMerge.py`, located in the top
+To run SMILESClickChem, use the python script `SMILESClickChem.py`, located in the top
 SMILESClickChem directory, from the command line. SMILESClickChem accepts user input via
 two methods:
 
@@ -217,11 +217,10 @@ two methods:
 ```bash
 cd /PATH_TO/SMILESClickChem/
 
-python RunSMILESMerge.py \
+python SMILESClickChem.py \
     --source_compound_file /SMILESClickChem/source_compounds/naphthalene_smiles.smi \
     --root_output_folder /PATH_TO/output_directory/ \
     --number_of_mutants 50 \
-    --number_of_crossovers 50 \
     --number_of_processors -1 \
     --LipinskiLenientFilter \
     --rxn_library ClickChem \
@@ -233,7 +232,7 @@ python RunSMILESMerge.py \
 
 ```bash
 cd /PATH_TO/SMILESClickChem/
-python RunSMILESMerge.py -j /PATH_TO/json_file_with_variable.json
+python SMILESClickChem.py -j /PATH_TO/json_file_with_variable.json
 ```
 
 Examples of the json files can be found in the folder
@@ -243,7 +242,7 @@ Examples of the json files can be found in the folder
 
 The GUI interface requires the additional dependency of GOOEY (https://github.com/chriskiehl/Gooey). To use the GUI, please run the following command from a terminal with a modern Python environment:
 
-`python /SMILESClickChem/RunSMILESMerge_GUI.py `
+`python /SMILESClickChem/SMILESClickChem_GUI.py `
 
 If all dependencies are installed properly this will prompt you to select all required parameters.
 
@@ -252,7 +251,7 @@ If all dependencies are installed properly this will prompt you to select all re
 An explanation of every parameter can be retrieved by running:
 
 ```bash
-python /SMILESClickChem/RunSMILESMerge.py --help
+python /SMILESClickChem/SMILESClickChem.py --help
 ```
 
 Custom options such as custom filters, reaction libraries,
@@ -307,17 +306,17 @@ More details are provided directly below and in the
 Dockerized SMILESClickChem requires the user to specify parameters via a JSON file
 (not the command line).
 
-To run the `SMILESMerge_in_docker.py` script:
+To run the `SMILESClickChem_in_docker.py` script:
 
 Linux/MacOS:
 
 1. Change into the `/SMILESClickChem/docker/` directory in a bash terminal: `cd
    /SMILESClickChem/docker/`
-2. Run `SMILESMerge_in_docker.py` with `sudo` and supply a json file using the
+2. Run `SMILESClickChem_in_docker.py` with `sudo` and supply a json file using the
    normal pathing of your system.
-3. Execute `SMILESMerge_in_docker.py` with `sudo` privileges, providing it with a
+3. Execute `SMILESClickChem_in_docker.py` with `sudo` privileges, providing it with a
    JSON file (MUST EXECUTE FROM `/SMILESClickChem/docker/`): `sudo python
-   SMILESMerge_in_docker.py -j ./examples/sample_submit_SMILESMerge_docker.json`
+   SMILESClickChem_in_docker.py -j ./examples/sample_submit_SMILESClickChem_docker.json`
 4. Results will appear in the output directory specified by the
    `--root_output_folder` parameter.
 
@@ -327,9 +326,9 @@ Windows OS:
    privileges.
 2. Change into the `/SMILESClickChem/docker/` directory in a bash enabled terminal:
    `cd /SMILESClickChem/docker/`
-3. Execute `SMILESMerge_in_docker.py` with `sudo` privileges, providing it with a
+3. Execute `SMILESClickChem_in_docker.py` with `sudo` privileges, providing it with a
    JSON file (MUST EXECUTE FROM `/SMILESClickChem/docker/`): `python
-   SMILESMerge_in_docker.py -j ./examples/sample_submit_SMILESMerge_docker.json`
+   SMILESClickChem_in_docker.py -j ./examples/sample_submit_SMILESClickChem_docker.json`
 4. Results will appear in the output directory specified by the
    `--root_output_folder` parameter.
 
@@ -362,7 +361,7 @@ I/O.
 
 This feature allows the user to incorporate custom python scripts for
 filtering ligands. These filters are applied to ligands after they are created
-by mutation/crossover but before Gypsum-DL conversion to 3D.
+by mutation but before Gypsum-DL conversion to 3D.
 
 This custom code will be copied to the directory:
 `/SMILESClickChem/SMILESClickChem/operators/filter/filter_classes/filter_children_classes/`
@@ -393,7 +392,7 @@ an example of each when submitting custom filters.
        `[["custom_filter_1","/PATH_TO/custom_filter_1.py"],["custom_filter_2","/PATH_TO/custom_filter_2.py"]]`
 
 ```bash
-python RunSMILESMerge.py \
+python SMILESClickChem.py \
     ... \
     --alternative_filter [["custom_filter_1","/PATH_TO/custom_filter_1.py"]]
 ```
@@ -413,7 +412,7 @@ python RunSMILESMerge.py \
 }
 ```
 
-Submit in terminal: `python RunSMILESMerge.py -j
+Submit in terminal: `python SMILESClickChem.py -j
 /PATH_TO/json_file_with_variable.json`
 
 ### 2. Custom Reaction libraries
@@ -619,7 +618,7 @@ Submission through .json format:
 }
 ```
 
-Submit via terminal: `python RunSMILESMerge.py -j
+Submit via terminal: `python SMILESClickChem.py -j
 /PATH_TO/json_file_with_variable.json`
 
 Command-line submission format:
@@ -632,7 +631,7 @@ Command-line submission format:
   `/PATH_TO/complementary_mol_directory/`
 
 ```bash
-python RunSMILESMerge.py \
+python SMILESClickChem.py \
     ... \
     --rxn_library Custom \
     --rxn_library_file /PATH_TO/rxn_library_file.json \
@@ -687,14 +686,14 @@ Submission through .json format:
 }
 ```
 
-Submit via terminal: `python RunSMILESMerge.py -j
+Submit via terminal: `python SMILESClickChem.py -j
 /PATH_TO/json_file_with_variable.json`
 
 Command- line submission format, where directory of SMI for complementary
 libraries is located at: `/PATH_TO/complementary_mol_directory/`
 
 ```bash
-python RunSMILESMerge.py \
+python SMILESClickChem.py \
     ... \
     --complementary_mol_directory /PATH_TO/complementary_mol_directory/
 ```
@@ -756,25 +755,25 @@ manners:
 1. Multiprocessing: When running SMILESClickChem in **Multiprocessing mode** using
    SLURM, one should:
    1. 1st run the `cache_prerun` option on a single processor. `srun -n 1
-      python RunSMILESMerge.py -c`
+      python SMILESClickChem.py -c`
       - USE `srun` or `mpirun` for the `cache_prerun`. This limits the
         `prerun` to a single processor thus preventing errors caused by race
         conditions when creating pycache files.
-   2. Then run SMILESClickChem as intended. `python RunSMILESMerge.py -j
+   2. Then run SMILESClickChem as intended. `python SMILESClickChem.py -j
       custom_parameters.json`
       - Do not use `srun` or `mpirun` for the production run. cpu/job
         distribution is handled internally. Using `srun` or `mpirun` can cause
         errors with the `mpi4py` universe.
 2. MPI: When running SMILESClickChem in **MPI mode** using SLURM, one should:
     1. 1st run the `cache_prerun` option on a single processor. `srun -n 1
-       python RunSMILESMerge.py -c`
+       python SMILESClickChem.py -c`
        - USE `srun` or `mpirun` for the `cache_prerun`. This limits the prerun
          to a single processor thus preventing errors caused by race
          conditions when creating pycache files.
     2. Then run the simulation as intended.
-        - `mpirun -n num_processors python -m mpi4py RunSMILESMerge.py -j
+        - `mpirun -n num_processors python -m mpi4py SMILESClickChem.py -j
           custom_parameters.json`
-        - Make sure to provide the `-m mpi4py` before `RunSMILESMerge.py`. This
+        - Make sure to provide the `-m mpi4py` before `SMILESClickChem.py`. This
           tells python how to handle Exceptions.
 
 ## Accessory Scripts

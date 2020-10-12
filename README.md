@@ -10,17 +10,17 @@ SMILESClickChem accepts a list of SMILES (in .smi format) and will attempt to pr
 
 SMILESClickChem is primarily a python based program which can be run through command-line and GUI interface. More details can be found within `/PATH/SMILESClickChem/tutorial/tutorial.md` or by running:
 
-`python /PATH/SMILESClickChem/RunSMILESMerge.py -h`
+`python /PATH/SMILESClickChem/SMILESClickChem.py -h`
 
 ## Command-Line Interface
 
 In a terminal with a modern Python environment run either:
 
-`python /PATH/SMILESClickChem/RunSMILESMerge.py -j /PATH/To/JSON_Paramerter_File.json`
+`python /PATH/SMILESClickChem/SMILESClickChem.py -j /PATH/To/JSON_Paramerter_File.json`
 
 or
 
-`python /PATH/SMILESClickChem/RunSMILESMerge.py --source_compound_file  /PATH/To/SMILES_File.smi`
+`python /PATH/SMILESClickChem/SMILESClickChem.py --source_compound_file  /PATH/To/SMILES_File.smi`
 
 Where `/PATH/To/JSON_Paramerter_File.json` is a JSON file containing all user parameters and `/PATH/To/SMILES_File.smi` is a file of all SMILES to be crossed
 
@@ -29,7 +29,7 @@ Where `/PATH/To/JSON_Paramerter_File.json` is a JSON file containing all user pa
 
 The GUI interface requires the additional dependency of GOOEY (https://github.com/chriskiehl/Gooey). To use the GUI, please run the following command from a terminal with a modern Python environment:
 
-`python /PATH/SMILESClickChem/RunSMILESMerge_GUI.py `
+`python /PATH/SMILESClickChem/SMILESClickChem_GUI.py `
 
 
 # Dependencies
