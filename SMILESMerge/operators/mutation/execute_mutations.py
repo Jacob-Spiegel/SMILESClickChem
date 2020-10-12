@@ -8,7 +8,7 @@ import random
 import copy
 
 
-import SMILESMerge.operators.mutation.smiles_click_chem.smiles_click_chem as SmileClickClass
+import SMILESClickChem.operators.mutation.smiles_click_chem.smiles_click_chem as SmileClickClass
 
 
 #######################################

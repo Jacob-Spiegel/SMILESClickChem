@@ -3,7 +3,7 @@
 """This is the executable file for Autogrow 4.0.2. This script should come
 first. It should obtain and verify all the parameters work. This than should
 pass these parameters variables to the main execution function titled
-SMILESMergeMainExecute.py found in MainFunctions
+SMILESClickChemMainExecute.py found in MainFunctions
 
 If you use AutoGrow 4.0.2 in your research, please cite the following reference:
 Spiegel, J.O., Durrant, J.D. AutoGrow4: an open-source genetic algorithm
@@ -68,7 +68,7 @@ PARSER.add_argument(
     the 1st generation. Default is True.",
 )
 
-# SmilesMerge Settings
+# SMILESClickChem Settings
 PARSER.add_argument(
     "--max_time_MCS_prescreen",
     type=int,
@@ -94,8 +94,8 @@ PARSER.add_argument(
     "--protanate_step",
     action="store_true",
     default=False,
-    help="Indicates if Smilesmerge uses protanated mols (if true) or deprot \
-    (if False) SmilesMerge is 10x faster when deprotanated",
+    help="Indicates if SMILESClickChem uses protanated mols (if true) or deprot \
+    (if False) SMILESClickChem is 10x faster when deprotanated",
 )
 
 
@@ -350,7 +350,7 @@ if args_dict["cache_prerun"] is False:
 
     start_time = str(datetime.datetime.now())
     # load the commandline parameters
-    from SMILESMerge.user_vars import load_in_commandline_parameters
+    from SMILESClickChem.user_vars import load_in_commandline_parameters
 
     vars, printout = load_in_commandline_parameters(INPUTS)
 
@@ -365,12 +365,12 @@ if args_dict["cache_prerun"] is False:
     print("=====================================================")
     print("=====================================================\n\n")
 
-    # Run SMILESMerge. Import move here to prevent EOF in MPI mode. importing
+    # Run SMILESClickChem. Import move here to prevent EOF in MPI mode. importing
     # files before the Parallelizer class is established in MPI mode can have
     # errors
-    import SMILESMerge.SMILESMerge_main_execute as SMILESMergeMainExecute
+    import SMILESClickChem.SMILESClickChem_main_execute as SMILESClickChemMainExecute
 
-    SMILESMergeMainExecute.main_execute(vars)
+    SMILESClickChemMainExecute.main_execute(vars)
 
     # Print completion message
 
@@ -385,6 +385,6 @@ if args_dict["cache_prerun"] is False:
 
 
 else:  # cache prerun. This is necessary to prevent race conditions in mpi mode.
-    import SMILESMerge.user_vars
-    import SMILESMerge.SMILESMerge_main_execute as SMILESMergeMainExecute
-    import SMILESMerge.operators.convert_files.gypsum_dl.gypsum_dl.Parallelizer
+    import SMILESClickChem.user_vars
+    import SMILESClickChem.SMILESClickChem_main_execute as SMILESClickChemMainExecute
+    import SMILESClickChem.operators.convert_files.gypsum_dl.gypsum_dl.Parallelizer

@@ -18,7 +18,7 @@ import __future__
 from rdkit.Chem import FilterCatalog
 from rdkit.Chem.FilterCatalog import FilterCatalogParams
 
-from SMILESMerge.operators.filter.filter_classes.parent_filter_class import ParentFilter
+from SMILESClickChem.operators.filter.filter_classes.parent_filter_class import ParentFilter
 
 
 class PAINSFilter(ParentFilter):

@@ -15,11 +15,11 @@ import rdkit.Chem as Chem
 # Disable the unnecessary RDKit warnings
 rdkit.RDLogger.DisableLog("rdApp.*")
 
-import SMILESMerge.operators.filter.execute_filters as Filter
-import SMILESMerge.operators.mutation.execute_mutations as Mutation
-import SMILESMerge.operators.crossover.execute_crossover as execute_crossover
-import SMILESMerge.operators.convert_files.conversion_to_3d as conversion_to_3d
-import SMILESMerge.operators.convert_files.gypsum_dl.gypsum_dl.MolObjectHandling as MOH
+import SMILESClickChem.operators.filter.execute_filters as Filter
+import SMILESClickChem.operators.mutation.execute_mutations as Mutation
+import SMILESClickChem.operators.crossover.execute_crossover as execute_crossover
+import SMILESClickChem.operators.convert_files.conversion_to_3d as conversion_to_3d
+import SMILESClickChem.operators.convert_files.gypsum_dl.gypsum_dl.MolObjectHandling as MOH
 
 
 def get_usable_format(infile):

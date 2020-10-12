@@ -10,7 +10,7 @@ from rdkit import Chem
 # Disable the unnecessary RDKit warnings
 rdkit.RDLogger.DisableLog("rdApp.*")
 
-import SMILESMerge.operators.convert_files.gypsum_dl.gypsum_dl.MolObjectHandling as MOH
+import SMILESClickChem.operators.convert_files.gypsum_dl.gypsum_dl.MolObjectHandling as MOH
 
 
 

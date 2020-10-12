@@ -10,10 +10,10 @@ from rdkit.Chem import rdFMCS
 # Disable the unnecessary RDKit warnings
 rdkit.RDLogger.DisableLog("rdApp.*")
 
-import SMILESMerge.operators.crossover.smiles_merge.merge_functions.merge_w_core as MWC
-import SMILESMerge.operators.crossover.smiles_merge.merge_functions.dict_and_r_groups as DnR
-import SMILESMerge.operators.crossover.smiles_merge.merge_functions.alignment_and_breaks as AnB
-import SMILESMerge.operators.convert_files.gypsum_dl.gypsum_dl.MolObjectHandling as MOH
+import SMILESClickChem.operators.crossover.smiles_merge.merge_functions.merge_w_core as MWC
+import SMILESClickChem.operators.crossover.smiles_merge.merge_functions.dict_and_r_groups as DnR
+import SMILESClickChem.operators.crossover.smiles_merge.merge_functions.alignment_and_breaks as AnB
+import SMILESClickChem.operators.convert_files.gypsum_dl.gypsum_dl.MolObjectHandling as MOH
 
 def process_ligand_new_mol(ligand_new_mol):
     """

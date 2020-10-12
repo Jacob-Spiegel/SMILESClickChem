@@ -9,7 +9,7 @@ making your contribution. We at the look forward to your contributions.
 ## Reporting a bug
 
 If you're unable to find an open issue addressing the bug, feel free to [open
-a new one](https://github.com/Jacob-Spiegel/SMILESMerge/issues/). Be sure to
+a new one](https://github.com/Jacob-Spiegel/SMILESClickChem/issues/). Be sure to
 include a **title and clear description**, as much relevant information as
 possible (e.g., the program, platform, or operating-system version numbers),
 and a **code sample** or **test case** demonstrating the expected behavior

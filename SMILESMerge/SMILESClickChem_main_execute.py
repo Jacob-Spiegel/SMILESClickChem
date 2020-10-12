@@ -1,5 +1,5 @@
 """
-Top level for running SMILESMerge.
+Top level for running SMILESClickChem.
 Runs all population generation (operations).
 Runs plotting at end.
 """
@@ -10,7 +10,7 @@ import glob
 import sys
 import shutil
 
-import SMILESMerge.operators.operations as operations
+import SMILESClickChem.operators.operations as operations
 
 def main_execute(vars):
     """

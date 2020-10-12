@@ -13,8 +13,8 @@ from rdkit.Chem import AllChem
 # Disable the unnecessary RDKit warnings
 rdkit.RDLogger.DisableLog("rdApp.*")
 
-import SMILESMerge.operators.convert_files.gypsum_dl.gypsum_dl.MolObjectHandling as MOH
-import SMILESMerge.operators.filter.execute_filters as Filter
+import SMILESClickChem.operators.convert_files.gypsum_dl.gypsum_dl.MolObjectHandling as MOH
+import SMILESClickChem.operators.filter.execute_filters as Filter
 
 
 class SmilesClickChem(object):

@@ -29,8 +29,8 @@ GYPSUM_GYPSUM_DIR = (
 )
 sys.path.extend([GYPSUM_DIR, CURRENT_DIR, GYPSUM_GYPSUM_DIR])
 
-import SMILESMerge.operators.convert_files.gypsum_dl.gypsum_dl.MolObjectHandling as MOH
-from SMILESMerge.operators.convert_files.gypsum_dl.gypsum_dl.Start import prepare_molecules
+import SMILESClickChem.operators.convert_files.gypsum_dl.gypsum_dl.MolObjectHandling as MOH
+from SMILESClickChem.operators.convert_files.gypsum_dl.gypsum_dl.Start import prepare_molecules
 
 
 

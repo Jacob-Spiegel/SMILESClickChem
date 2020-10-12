@@ -126,7 +126,7 @@ def multiprocess_handling(vars):
     # # # launch mpi workers
     if vars["multithread_mode"] == "mpi":
         # Avoid EOF error
-        from SMILESMerge.operators.convert_files.gypsum_dl.gypsum_dl.Parallelizer import (
+        from SMILESClickChem.operators.convert_files.gypsum_dl.gypsum_dl.Parallelizer import (
             Parallelizer,
         )
 
@@ -144,7 +144,7 @@ def multiprocess_handling(vars):
         #   has problems with importing the MPI environment and mpi4py
         #   So we will flag it to skip the MPI mode and just go to multithread/serial
         # This is a saftey precaution
-        from SMILESMerge.operators.convert_files.gypsum_dl.gypsum_dl.Parallelizer import Parallelizer
+        from SMILESClickChem.operators.convert_files.gypsum_dl.gypsum_dl.Parallelizer import Parallelizer
 
         vars["parallelizer"] = Parallelizer(
             vars["multithread_mode"], vars["number_of_processors"], True
@@ -287,7 +287,7 @@ def determine_bash_timeout_vs_gtimeout():
     printout = "Need to install GNU tools for Bash to work. \n"
     printout = (
         printout
-        + "This is essential to use Bash Timeout function in SMILESMerge. \n"
+        + "This is essential to use Bash Timeout function in SMILESClickChem. \n"
     )
     printout = printout + "\t This will require 1st installing homebrew. \n"
     printout = printout + "\t\t Instructions found at: https://brew.sh/ \n"
@@ -300,7 +300,7 @@ def determine_bash_timeout_vs_gtimeout():
 def check_dependencies():
     """
     This function will try to import all the installed dependencies that will be
-    used in SMILESMerge. If it fails to import it will raise an ImportError
+    used in SMILESClickChem. If it fails to import it will raise an ImportError
     """
 
     # Check Bash Timeout function (There's a difference between MacOS and linux)
@@ -1025,9 +1025,9 @@ def make_complete_children_dict(purpose_of_object):
     :returns: dict child_dict: Dictionary of all the class objects for Filtering
     """
     if purpose_of_object == "filter":
-        import SMILESMerge.operators.filter.filter_classes.filter_children_classes
-        from SMILESMerge.operators.filter.filter_classes.parent_filter_class import ParentFilter as parent_object
-        from SMILESMerge.operators.filter.filter_classes.get_child_filter_class import get_all_subclasses
+        import SMILESClickChem.operators.filter.filter_classes.filter_children_classes
+        from SMILESClickChem.operators.filter.filter_classes.parent_filter_class import ParentFilter as parent_object
+        from SMILESClickChem.operators.filter.filter_classes.get_child_filter_class import get_all_subclasses
 
     children = get_all_subclasses(parent_object)
     child_dict = {}
@@ -1060,7 +1060,7 @@ def filter_choice_handling(vars):
         chosen_ligand_filters, vars = picked_filters(vars)
     vars["chosen_ligand_filters"] = chosen_ligand_filters
 
-    import SMILESMerge.operators.filter.execute_filters as Filter
+    import SMILESClickChem.operators.filter.execute_filters as Filter
 
 
     # get child filter class object function dictionary

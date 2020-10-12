@@ -24,7 +24,7 @@ import rdkit.Chem.Descriptors as Descriptors
 #Disable the unnecessary RDKit warnings
 rdkit.RDLogger.DisableLog('rdApp.*')
 
-from SMILESMerge.operators.filter.filter_classes.parent_filter_class import ParentFilter
+from SMILESClickChem.operators.filter.filter_classes.parent_filter_class import ParentFilter
 
 
 class LipinskiStrictFilter(ParentFilter):

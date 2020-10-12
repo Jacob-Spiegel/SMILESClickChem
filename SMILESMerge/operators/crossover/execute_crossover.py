@@ -24,9 +24,9 @@ from rdkit.Chem import rdFMCS
 rdkit.RDLogger.DisableLog("rdApp.*")
 
 
-import SMILESMerge.operators.filter.execute_filters as Filter
-import SMILESMerge.operators.crossover.smiles_merge.smiles_merge as smiles_merge
-import SMILESMerge.operators.convert_files.gypsum_dl.gypsum_dl.MolObjectHandling as MOH
+import SMILESClickChem.operators.filter.execute_filters as Filter
+import SMILESClickChem.operators.crossover.smiles_merge.smiles_merge as smiles_merge
+import SMILESClickChem.operators.convert_files.gypsum_dl.gypsum_dl.MolObjectHandling as MOH
 
 
 
@@ -379,7 +379,7 @@ def do_crossovers_smiles_merge(vars, lig1_smile_pair, ligands_list):
     substructure with Ligand 1.
 
     This pair of ligands will be passed off to the
-    SmilesMerge.run_main_smiles_merge function which will execute a crossover
+    SMILESClickChem.run_main_smiles_merge function which will execute a crossover
     and return a new molecule
 
     Inputs:
@@ -409,7 +409,7 @@ def do_crossovers_smiles_merge(vars, lig1_smile_pair, ligands_list):
 
     counter = 0
     while counter < 3:
-        # run SmilesMerge
+        # run SMILESClickChem
         ligand_new_smiles = smiles_merge.run_main_smiles_merge(
             vars, ligand_1_string, ligand_2_string
         )

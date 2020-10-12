@@ -11,7 +11,7 @@ from rdkit import Chem
 # Disable the unnecessary RDKit warnings
 rdkit.RDLogger.DisableLog("rdApp.*")
 
-import SMILESMerge.operators.crossover.smiles_merge.merge_functions.mapping_class as mapping_class
+import SMILESClickChem.operators.crossover.smiles_merge.merge_functions.mapping_class as mapping_class
 
 
 def handle_dicts_and_select_b_groups(mol_1, mol_2, mcs_mol):

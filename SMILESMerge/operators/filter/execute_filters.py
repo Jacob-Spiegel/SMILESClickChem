@@ -12,11 +12,11 @@ from rdkit.Chem.MolStandardize import rdMolStandardize
 # Disable the unnecessary RDKit warnings
 rdkit.RDLogger.DisableLog("rdApp.*")
 
-from SMILESMerge.operators.filter.filter_classes.parent_filter_class import ParentFilter
-from SMILESMerge.operators.filter.filter_classes.get_child_filter_class import get_all_subclasses
+from SMILESClickChem.operators.filter.filter_classes.parent_filter_class import ParentFilter
+from SMILESClickChem.operators.filter.filter_classes.get_child_filter_class import get_all_subclasses
 
-import SMILESMerge.operators.convert_files.gypsum_dl.gypsum_dl.MolObjectHandling as MOH
-from SMILESMerge.operators.filter.filter_classes.filter_children_classes import *
+import SMILESClickChem.operators.convert_files.gypsum_dl.gypsum_dl.MolObjectHandling as MOH
+from SMILESClickChem.operators.filter.filter_classes.filter_children_classes import *
 
 
 def make_run_class_dict(filters_to_use):
