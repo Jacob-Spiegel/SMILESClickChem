@@ -132,7 +132,7 @@ def populate_generation(vars):
     # Save seed list
     save_ligand_list(
         vars["output_directory"],
-        "",
+        seed_list,
         "Seed_List",
     )
 
