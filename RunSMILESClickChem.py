@@ -1,11 +1,11 @@
 # !/usr/bin/env python
 
-"""This is the executable file for Autogrow 4.0.2. This script should come
+"""This is the executable file for SMILESClickChem. This script should come
 first. It should obtain and verify all the parameters work. This than should
 pass these parameters variables to the main execution function titled
 SMILESClickChemMainExecute.py found in MainFunctions
 
-If you use AutoGrow 4.0.2 in your research, please cite the following reference:
+If you use SMILESClickChem in your research, please cite the following reference:
 Spiegel, J.O., Durrant, J.D. AutoGrow4: an open-source genetic algorithm
 for de novo drug design and lead optimization. J Cheminform 12, 25 (2020).
 [doi: 10.1186/s13321-020-00429-4]
@@ -20,7 +20,7 @@ import datetime
 # Imports of files are burried below to prevent EOF issues in MPI mode
 
 ################
-# Run AutoGrow #
+# Run SMILESClickChem #
 ################
 
 PARSER = argparse.ArgumentParser()
@@ -40,7 +40,7 @@ PARSER.add_argument(
     "-d",
     action="store_true",
     default=False,
-    help="Run Autogrow in Debug mode. This keeps all \
+    help="Run SMILESClickChem in Debug mode. This keeps all \
     temporary files and adds extra print statements.",
 )
 
@@ -131,8 +131,8 @@ PARSER.add_argument(
     should be named with the same title as the functional groups described in \
     rxn_library_file & function_group_library +.smi \
     All Functional groups specified function_group_library must have its \
-    own .smi file. We recommend you filter these dictionaries prior to Autogrow \
-    for the Drug-likeliness and size filters you will Run Autogrow with.",
+    own .smi file. We recommend you filter these dictionaries prior to SMILESClickChem \
+    for the Drug-likeliness and size filters you will Run SMILESClickChem with.",
 )
 
 
@@ -374,11 +374,11 @@ if args_dict["cache_prerun"] is False:
 
     # Print completion message
 
-    printout = "\nAutoGrow4 run started at:   {}\nAutoGrow4 ".format(start_time)
+    printout = "\nSMILESClickChem run started at:   {}\nSMILESClickChem ".format(start_time)
     printout = printout + "run completed at: {}\n".format(str(datetime.datetime.now()))
     print(printout)
 
-    print("AUTOGROW FINISHED")
+    print("SMILESClickChem FINISHED")
 
     # # kill mpi workers
     vars["parallelizer"].end(vars["multithread_mode"])

@@ -14,7 +14,7 @@ import SMILESClickChem.operators.operations as operations
 
 def main_execute(vars):
     """
-    This function takes the user variables and runs Autogrow
+    This function takes the user variables and runs SMILESClickChem
 
     Inputs:
     :param dict vars: dict of user variables which will govern how the
