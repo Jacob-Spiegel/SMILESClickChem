@@ -420,12 +420,6 @@ def define_defaults():
     # used for relative pathings
     script_dir = os.path.dirname(os.path.realpath(__file__))
 
-    # Crossover function
-    vars["max_time_mcs_prescreen"] = 1
-    vars["max_time_mcs_thorough"] = 1
-    vars["min_atom_match_mcs"] = 4
-    vars["protanate_step"] = False
-
     # Mutation Settings
     vars["rxn_library"] = "click_chem_rxns"
     vars["rxn_library_file"] = ""
@@ -439,7 +433,6 @@ def define_defaults():
     # Populations settings
     vars["filter_source_compounds"] = True
     vars["num_generations"] = 1
-    vars["number_of_crossovers"] = 10
     vars["number_of_mutants"] = 10
 
     # Filters

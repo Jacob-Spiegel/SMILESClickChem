@@ -156,13 +156,6 @@ PARSER.add_argument(
 
 # Populations settings
 PARSER.add_argument(
-    "--number_of_crossovers",
-    type=int,
-    default=10,
-    help="The number of ligands which will be created via crossover in each \
-    generation besides the first",
-)
-PARSER.add_argument(
     "--number_of_mutants",
     type=int,
     default=10,

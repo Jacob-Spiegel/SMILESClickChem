@@ -37,9 +37,9 @@ def main_execute(vars):
     sys.stdout.flush()
 
     if new_gen_ligands_list is None:
-        raise ValueError("Population failed to make enough mutants or crossovers... \
+        raise ValueError("Population failed to make enough mutants... \
                             Errors could include not enough diversity, too few seeds to the generation, \
-                            the seed mols are unable to cross-over due to lack of similarity,\
+                            number_of_mutants is too high, \
                             or all of the seed lack functional groups for performing reactions.")
 
         # @JAKE Add back in clean up files!!! And file compression
