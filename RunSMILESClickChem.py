@@ -309,18 +309,6 @@ PARSER.add_argument(
     the gypsum_timeout_limit. Default gypsum_timeout_limit is 15 seconds",
 )
 
-# Reduce files down. This compiles and compresses the files in the PDBs folder
-# makes data transfer quicker, but requires running the
-# file_concatenation_and_compression.py in the Utility script folder to
-# separate these files out for readability.
-PARSER.add_argument(
-    "--reduce_files_sizes",
-    choices=[True, False, "True", "False", "true", "false"],
-    default=True,
-    help="Run this combines all files in the PDBs folder into a \
-    single text file. Useful when data needs to be transferred.",
-)
-
 # mpi mode pre-Run so there are python cache files without EOF Errors
 PARSER.add_argument(
     "--cache_prerun",
@@ -343,7 +331,7 @@ if args_dict["cache_prerun"] is False:
 
     start_time = str(datetime.datetime.now())
     # load the commandline parameters
-    from SMILESClickChem.user_vars import load_in_commandline_parameters
+    from smilesclickchem.user_vars import load_in_commandline_parameters
 
     vars, printout = load_in_commandline_parameters(INPUTS)
 
@@ -361,7 +349,7 @@ if args_dict["cache_prerun"] is False:
     # Run SMILESClickChem. Import move here to prevent EOF in MPI mode. importing
     # files before the Parallelizer class is established in MPI mode can have
     # errors
-    import SMILESClickChem.SMILESClickChem_main_execute as SMILESClickChemMainExecute
+    import smilesclickchem.smilesclickchem_main_execute as SMILESClickChemMainExecute
 
     SMILESClickChemMainExecute.main_execute(vars)
 
@@ -378,6 +366,6 @@ if args_dict["cache_prerun"] is False:
 
 
 else:  # cache prerun. This is necessary to prevent race conditions in mpi mode.
-    import SMILESClickChem.user_vars
-    import SMILESClickChem.SMILESClickChem_main_execute as SMILESClickChemMainExecute
-    import SMILESClickChem.operators.convert_files.gypsum_dl.gypsum_dl.Parallelizer
+    import smilesclickchem.user_vars
+    import smilesclickchem.smilesclickchem_main_execute as SMILESClickChemMainExecute
+    import smilesclickchem.operators.convert_files.gypsum_dl.gypsum_dl.Parallelizer
