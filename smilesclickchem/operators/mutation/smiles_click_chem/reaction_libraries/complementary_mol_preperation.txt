@@ -15,7 +15,7 @@ This list was further filtered to ensure that the SMILES could be converted to r
 and filtered with Lipinski Strict Filter.
 We populated the functional group libraries using this list.
 
-Compounds were sorted by molecular weight, 
+Compounds were sorted by molecular weight,
 Libraries exceeding 5,000 ligands were further minimized taking only the lightest 5,000 compounds..
 We favored low molecular weight as AutoGrow tends to grow compounds.
 
@@ -27,7 +27,7 @@ The complementary molecule libraries used in robust_rxns and click_chem_rxns wer
 
 The resulting libraries (when removing redundancies) uses: 185,615
 
-The default fragment libraries included with AutoGrow were derived 
+The default fragment libraries included with AutoGrow were derived
 from a subset of the ZINC database (https://zinc.docking.org/).
-We thank ZINC for allowing us to distribute these fragment 
+We thank ZINC for allowing us to distribute these fragment
 libraries to AutoGrow users.

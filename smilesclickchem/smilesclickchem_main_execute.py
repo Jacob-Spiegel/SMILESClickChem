@@ -29,7 +29,7 @@ def main_execute(vars):
     # 1)  generate new ligands
     # 2) optionally filter ligands
     # 3) optionally convert from 1D smiles to 3D (mol2/PDB)
-    
+
     sys.stdout.flush()
 
 

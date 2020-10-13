@@ -6,10 +6,10 @@ All the reactions were converted from 3D format to 2D SMARTS reactions.
 Several modifications included:
 1) AutoClickChem would identify Carboxyl groups as alchohols and perform reactions on those moieties as if they were alcohols.
     -This defect was removed. In the modern reactions Carboxyl groups ARE NOT CONSIDERED alcohols
-    -Similarly Thiol-Carboxyl (aka thiol_acid) groups are not considered alcohols/thiols. 
-2) AutoClickChem separated halides by acyl, alkyl, and aryl halides. 
+    -Similarly Thiol-Carboxyl (aka thiol_acid) groups are not considered alcohols/thiols.
+2) AutoClickChem separated halides by acyl, alkyl, and aryl halides.
     -This made sense as the mechanism of reaction differs between these halides:
-        ie) 
+        ie)
             Alcyl halide ---> azide   would be performed using a Nucleophilic Acyl Substitution
                 verses
             Alkyl halide ---> azide   would be performed using a Sn1/Sn2 reactions
@@ -20,8 +20,8 @@ Several modifications included:
 
 
             -details for both of these can be found:
-            https://www.masterorganicchemistry.com/2018/06/29/some-reactions-of-azides/ 
-        
+            https://www.masterorganicchemistry.com/2018/06/29/some-reactions-of-azides/
+
         If all R-groups, besides the halogen, that are bound to the central carbon are handled by dumby atom  [*]
         the reactions for both types of halides are essentially the same:
         [*][#6]-[Br] >> [*][#6]-N=[N+]=[N-]     # this is pseudo code version, infact the [*] is further simplified based on recursive SMARTS
@@ -50,12 +50,12 @@ Several modifications included:
 
 Additional Notes:
 1) Acid Anhydrides were restricted to non-cyclic Anhydrides:
-    Cylcic anhydrides can react (ex silico) in these reactions but are not compatible with the current 
-    version of the reaction SMARTS. This is because these reactions would break rings but not break 
+    Cylcic anhydrides can react (ex silico) in these reactions but are not compatible with the current
+    version of the reaction SMARTS. This is because these reactions would break rings but not break
     the molecule graph in the reaction. Cyclic breaks are difficult in SMARTS reaction notation.
-    
+
     This is not a modifications as AutoClickChem and AutoGrow 3 also excluded cyclic acid anhydrides
-    from these reactions. 
+    from these reactions.
 
 
-    
+

@@ -460,7 +460,7 @@ def define_defaults():
     # Other vars
     vars["debug_mode"] = False
     vars["reduce_files_sizes"] = False
-    
+
     # Check Bash Timeout function (There's a difference between MacOS and linux)
     # Linux uses timeout while MacOS uses gtimeout
     timeout_option = determine_bash_timeout_vs_gtimeout()
@@ -1011,7 +1011,7 @@ def make_complete_children_dict(purpose_of_object):
     """
     This will retrieve all the names of every child class of the parent class
     This can be  filter class
-    
+
     Inputs:
     :param str purpose_of_object: the filter
     Returns:

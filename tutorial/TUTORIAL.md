@@ -255,7 +255,7 @@ python /SMILESClickChem/SMILESClickChem.py --help
 ```
 
 Custom options such as custom filters, reaction libraries,
-etc., are described in other parts of the tutorial. 
+etc., are described in other parts of the tutorial.
 Details for preparing source compound files are
 provided directly below.
 
@@ -355,7 +355,7 @@ have been automatically copied into the proper locations. After that the new
 script should be integrated into SMILESClickChem.
 
 SMILESClickChem ASSUMES ALL CUSTOM CODE HAS BEEN TESTED AND FUNCTIONS WITH SPECIFIED
-I/O. 
+I/O.
 
 ### 1. Custom Ligand Filters ***
 

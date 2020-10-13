@@ -469,7 +469,7 @@ def merge_comp_and_ranked_dicts(vars):
 
     master_mol_dict = copy.deepcopy(comp_mol_dict)
     del comp_mol_dict
-    
+
     ranked_mol_dict = get_obj_from_pickle_file(ranked_mol_dict_pickle)
     # Since there shouldn't be docking information in the comp_mol_dict
     # we can feel free to overwrite any duplicate entries. Any duplicate
@@ -818,7 +818,7 @@ def process_inputs(inputs):
     except:
         raise Exception("variable file would not import. It should be the \
             vars.json file written by AutoGrow in the output folder of the run.")
-    
+
     if inputs["complementary_mol_directory"] in ["", None]:
 
         # Get complementary_mol_directory from vars.json
