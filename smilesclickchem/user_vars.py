@@ -11,7 +11,6 @@ import copy
 import datetime
 import json
 import sys
-import platform
 from shutil import copyfile
 
 
@@ -143,8 +142,10 @@ def multiprocess_handling(vars):
         # Lower level mpi (ie making a new Parallelizer within an mpi)
         #   has problems with importing the MPI environment and mpi4py
         #   So we will flag it to skip the MPI mode and just go to multithread/serial
-        # This is a saftey precaution
-        from smilesclickchem.operators.convert_files.gypsum_dl.gypsum_dl.Parallelizer import Parallelizer
+        # This is a safety precaution
+        from smilesclickchem.operators.convert_files.gypsum_dl.gypsum_dl.Parallelizer import (
+            Parallelizer,
+        )
 
         vars["parallelizer"] = Parallelizer(
             vars["multithread_mode"], vars["number_of_processors"], True

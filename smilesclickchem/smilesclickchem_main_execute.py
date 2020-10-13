@@ -5,10 +5,7 @@ Runs plotting at end.
 """
 import __future__
 
-import os
-import glob
 import sys
-import shutil
 
 import smilesclickchem.operators.operations as operations
 
@@ -44,4 +41,3 @@ def main_execute(vars):
 
     sys.stdout.flush()
 #
-
