@@ -49,16 +49,6 @@ def run_parser():
         Overrides other arguments.",
     )
 
-    # Allows the run in debug mode. Doesn't delete temp files.
-    PARSER.add_argument(
-        "--debug_mode",
-        "-d",
-        action="store_true",
-        default=False,
-        help="Run SMILESClickChem in Debug mode. This keeps all \
-        temporary files and adds extra print statements.",
-    )
-
     # Input/Output directories
     PARSER.add_argument(
         "--root_output_folder",
@@ -75,7 +65,7 @@ def run_parser():
     )
     PARSER.add_argument(
         "--filter_source_compounds",
-        choices=[True, False, "True", "False", "true", "false"],
+        action="store_true",
         default=True,
         help="If True source ligands from source_compound_file will be \
         filter using the user defined filter choices prior to the 1st generation being \
@@ -349,7 +339,7 @@ if args_dict["cache_prerun"] is False:
 
     start_time = str(datetime.datetime.now())
     # load the commandline parameters
-    from SMILESClickChem.user_vars import load_in_commandline_parameters
+    from smilesclickchem.user_vars import load_in_commandline_parameters
 
     vars, printout = load_in_commandline_parameters(INPUTS)
 
@@ -367,9 +357,9 @@ if args_dict["cache_prerun"] is False:
     # Run SMILESClickChem. Import move here to prevent EOF in MPI mode. importing
     # files before the Parallelizer class is established in MPI mode can have
     # errors
-    import SMILESClickChem.smilesclickchem_main_execute as smilesclickchem_main_execute
+    import smilesclickchem.smilesclickchem_main_execute as SMILESClickChemMainExecute
 
-    smilesclickchem_main_execute.main_execute(vars)
+    SMILESClickChemMainExecute.main_execute(vars)
 
     # Print completion message
 
@@ -384,6 +374,6 @@ if args_dict["cache_prerun"] is False:
 
 
 else:  # cache prerun. This is necessary to prevent race conditions in mpi mode.
-    import SMILESClickChem.user_vars
-    import SMILESClickChem.smilesclickchem_main_execute as smilesclickchem_main_execute
-    import SMILESClickChem.operators.convert_files.gypsum_dl.gypsum_dl.Parallelizer
+    import smilesclickchem.user_vars
+    import smilesclickchem.smilesclickchem_main_execute as SMILESClickChemMainExecute
+    import smilesclickchem.operators.convert_files.gypsum_dl.gypsum_dl.Parallelizer

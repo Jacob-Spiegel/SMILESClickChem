@@ -34,16 +34,6 @@ PARSER.add_argument(
     Overrides other arguments.",
 )
 
-# Allows the run in debug mode. Doesn't delete temp files.
-PARSER.add_argument(
-    "--debug_mode",
-    "-d",
-    action="store_true",
-    default=False,
-    help="Run SMILESClickChem in Debug mode. This keeps all \
-    temporary files and adds extra print statements.",
-)
-
 # Input/Output directories
 PARSER.add_argument(
     "--root_output_folder",
@@ -60,8 +50,8 @@ PARSER.add_argument(
 )
 PARSER.add_argument(
     "--filter_source_compounds",
-    choices=[True, False, "True", "False", "true", "false"],
-    default=True,
+        action="store_true",
+        default=True,
     help="If True source ligands from source_compound_file will be \
     filter using the user defined filter choices prior to the 1st generation being \
     created. If False, ligands which would fail the ligand filters could seed \

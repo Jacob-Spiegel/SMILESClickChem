@@ -417,10 +417,6 @@ def define_defaults():
 
     vars = {}
 
-    # where we are currently (absolute filepath from route)
-    # used for relative pathings
-    script_dir = os.path.dirname(os.path.realpath(__file__))
-
     # Mutation Settings
     vars["rxn_library"] = "click_chem_rxns"
     vars["rxn_library_file"] = ""
@@ -433,7 +429,6 @@ def define_defaults():
 
     # Populations settings
     vars["filter_source_compounds"] = True
-    vars["num_generations"] = 1
     vars["number_of_mutants"] = 10
 
     # Filters
@@ -457,10 +452,6 @@ def define_defaults():
     vars["max_ph"] = 8.4
     vars["pka_precision"] = 1.0
     vars["gypsum_timeout_limit"] = 10
-
-    # Other vars
-    vars["debug_mode"] = False
-    vars["reduce_files_sizes"] = False
 
     # Check Bash Timeout function (There's a difference between MacOS and linux)
     # Linux uses timeout while MacOS uses gtimeout
