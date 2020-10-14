@@ -1,4 +1,5 @@
 # SMILESClickChem
+[![DOI](https://zenodo.org/badge/303249038.svg)](https://zenodo.org/badge/latestdoi/303249038)
 
 SMILESClickChem is a cheminformatic, Python program that reacts one parent ligand (SMILES string) following predefined reactions to create a child compound. SMILESClickChem uses the mutation algorithm from the program AutoGrow4.
 
@@ -50,7 +51,8 @@ Much of this code is take directly and/or adapted from AutoGrow4. This program a
 
 ## SMILESClickChem Citation:
 
-- Spiegel, J.O. SMILESClickChem: an open-source program for automated de novo ligand design using in silico reactions. (2020)
+- Spiegel, J.O. SMILESClickChem: an open-source program for automated de novo ligand design using in silico reactions. (2020) https://doi.org/10.5281/zenodo.4087692
+[![DOI](https://zenodo.org/badge/303249038.svg)](https://zenodo.org/badge/latestdoi/303249038)
 
 ## GlauconiteFilter Citation:
 
