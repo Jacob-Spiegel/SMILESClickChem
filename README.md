@@ -1,6 +1,6 @@
 # SMILESClickChem
 
-SMILESClickChem is a cheminformatic, Python program for that reacts one parent ligand (SMILES string) following predefined reactions to create a child compound. SMILESClickChem uses the mutation algorithm from the program AutoGrow4.
+SMILESClickChem is a cheminformatic, Python program that reacts one parent ligand (SMILES string) following predefined reactions to create a child compound. SMILESClickChem uses the mutation algorithm from the program AutoGrow4.
 
 SMILESClickChem accepts a list of SMILES (in .smi format) and will attempt to produce a user defined number of unique children SMILES. SMILESClickChem also allows users to apply chemical property filters. Additionally, SMILESClickChem options the automated conversion of the children from 1/2D SMILES to 3D representations (PDB and 3D-SDF) using Gypsum-DL.
 
