@@ -14,4 +14,4 @@ Changes
 -----
 
 The original version:
-Spiegel, J.O., Durrant, J.D., GlauconiteFilter: an open-source program for automated ADME-PK filtering. (2020) https://doi.org/10.5281/zenodo.4087648
+Spiegel, J.O., Durrant, J.D., GlauconiteFilter: an open-source program for automated ADME-PK filtering. (2020) https://doi.org/10.5281/zenodo.4087691
