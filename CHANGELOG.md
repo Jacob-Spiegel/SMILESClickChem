@@ -7,8 +7,8 @@ Changes
 * Updated `$PATH/SMILESClickChem/RunSMILESClickChem.py` with minor updates and citations.
 * Updated `$PATH/SMILESClickChem/RunSMILESClickChem_GUI.py` with minor updates and citations.
 * Updated `$PATH/SMILESClickChem/smilesclickchem/user_vars.py` with minor updates and citations.
-* Updated `$PATH/autogrow4/README.md` with minor updates and citations.
-* Added `$PATH/autogrow4/CHANGELOG.md`.
+* Updated `$PATH/SMILESClickChem/README.md` with minor updates and citations.
+* Added `$PATH/SMILESClickChem/CHANGELOG.md`.
 
 1.0.0
 -----

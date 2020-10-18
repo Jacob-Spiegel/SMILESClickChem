@@ -21,7 +21,7 @@ def program_info():
     Returns:
     :returns: str program_output: a string for the print of the program information
     """
-    program_output = "\SMILESClickChem Version 1.0.1\n"
+    program_output = "\nSMILESClickChem Version 1.0.1\n"
     program_output = program_output + " ================== \n"
     program_output = (
         program_output
