@@ -47,16 +47,16 @@ SMILESClickChem was tested on a Python 3.7.7 environment on a Ubuntu OS. A docke
 
 # Acknowledgment and Citing
 
-Much of this code is take directly and/or adapted from AutoGrow4. This program also relies on Gypsum-DL and Dimorphite-DL for ligand handling and multiprocessing. Please remember to cite the following papers:
+Much of this code is take directly and/or adapted from AutoGrow4 and Glauconite. This program also relies on Gypsum-DL and Dimorphite-DL for ligand handling and multiprocessing. Please remember to cite the following papers:
 
 ## SMILESClickChem Citation:
 
-- Spiegel, J.O., Durrant, J.D., SMILESClickChem: an open-source program for automated de novo ligand design using in silico reactions. (2020) https://doi.org/10.5281/zenodo.4087692
+- Spiegel, J.O., Durrant, J.D., SMILESClickChem: an open-source program for automated de novo ligand design using in silico reactions. (2020) https://doi.org/10.5281/zenodo.4087691
 [![DOI](https://zenodo.org/badge/303249038.svg)](https://zenodo.org/badge/latestdoi/303249038)
 
 ## GlauconiteFilter Citation:
 
-- Spiegel, J.O., Durrant, J.D., GlauconiteFilter: an open-source program for automated ADME-PK filtering. (2020) https://doi.org/10.5281/zenodo.4087691
+- Spiegel, J.O., Durrant, J.D., GlauconiteFilter: an open-source program for automated ADME-PK filtering. (2020) https://doi.org/10.5281/zenodo.4087647
 [![DOI](https://zenodo.org/badge/303535253.svg)](https://zenodo.org/badge/latestdoi/303535253)
 
 ## AutoGrow4 Citation:

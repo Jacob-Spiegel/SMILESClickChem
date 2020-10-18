@@ -28,9 +28,15 @@ def program_info():
         + "If you use SMILESClickChem in your research, please cite the following references:\n"
     )
     program_output = program_output + "Spiegel, J.O., Durrant, J.D. \n"
+    program_output = program_output + "SMILESClickChem: an open-source program for  "
+    program_output = program_output + "automated de novo ligand design using in silico reactions"
+    program_output = program_output + ". (2020) \n"
+    program_output = program_output + "[doi: 10.5281/zenodo.4087691]\n\n"
+    
+    program_output = program_output + "Spiegel, J.O., Durrant, J.D. \n"
     program_output = program_output + "GlauconiteFilter: an open-source program "
     program_output = program_output + "for automated ADME-PK filtering. (2020) \n"
-    program_output = program_output + "[doi: 10.5281/zenodo.4087691]\n\n"
+    program_output = program_output + "[doi: 10.5281/zenodo.4087647]\n\n"
 
     program_output = program_output + "Spiegel, J.O., Durrant, J.D. \n"
     program_output = program_output + "AutoGrow4: an open-source genetic algorithm "
