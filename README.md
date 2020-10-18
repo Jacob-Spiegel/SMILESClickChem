@@ -47,7 +47,7 @@ SMILESClickChem was tested on a Python 3.7.7 environment on a Ubuntu OS. A docke
 
 # Acknowledgment and Citing
 
-Much of this code is take directly and/or adapted from AutoGrow4 and Glauconite. This program also relies on Gypsum-DL and Dimorphite-DL for ligand handling and multiprocessing. Please remember to cite the following papers:
+Much of this code is take directly and/or adapted from AutoGrow4 and GlauconiteFilter. This program also relies on Gypsum-DL and Dimorphite-DL for ligand handling and multiprocessing. Please remember to cite the following papers:
 
 ## SMILESClickChem Citation:
 
